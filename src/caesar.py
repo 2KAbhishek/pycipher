@@ -10,7 +10,7 @@ def main():
         print("The encrypted message is:", caesar(message, key))
 
 # Apply Caesar cipher to message using key
-def caesar(message, key, encrypt=True):
+def caesar(message: str, key: int, encrypt: bool = True) -> str:
     stripped_message = remove_spaces(message)
     encrypted_message = ""
     for ch in stripped_message:
