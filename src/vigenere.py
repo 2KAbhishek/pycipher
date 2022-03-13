@@ -1,3 +1,5 @@
+from .lib.util import *
+
 # Program to encrypt and decrypt messages using vigenere cipher
 def main():
     message = input("Enter the message: ")
@@ -7,18 +9,6 @@ def main():
         print("The decrypted message is:", vigenere(message, key, False))
     else:
         print("The encrypted message is:", vigenere(message, key))
-
-# Remove spaces from the message
-def remove_spaces(message):
-    return("".join(message.split()))
-
-# Get back original message
-def add_spaces(processed, original):
-    processed = list(processed)
-    for i in range(len(original)):
-        if original[i] == ' ':
-            processed.insert(i, ' ')
-    return ("" . join(processed))
 
 # Generate the key with appropriate for cipher
 def generate_key(message, key):
