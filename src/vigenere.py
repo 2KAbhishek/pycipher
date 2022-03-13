@@ -1,4 +1,4 @@
-# Program to encrypt and decrypt messages using a Caesar cipher
+# Program to encrypt and decrypt messages using vigenere cipher
 def main():
     message = input("Enter the message: ")
     key = input("Enter the key: ")
@@ -30,7 +30,7 @@ def generate_key(message, key):
             key.append(key[i % len(key)])
     return("" . join(key))
 
-# Encrypt the message using the key
+# Apply vigener cipher to message using key
 def vigenere(message, key, encrypt=True):
     stripped_message = remove_spaces(message)
     gen_key = generate_key(stripped_message, key)
