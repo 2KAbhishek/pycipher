@@ -1,3 +1,4 @@
+from turtle import st
 from .lib.util import *
 
 # Program to encrypt and decrypt messages using vigenere cipher
@@ -11,7 +12,7 @@ def main():
         print("The encrypted message is:", vigenere(message, key))
 
 # Generate the key with appropriate for cipher
-def generate_key(message, key):
+def generate_key(message: str, key: str) -> str:
     key = list(key)
     if len(message) == len(key):
         return(key)
@@ -21,7 +22,7 @@ def generate_key(message, key):
     return("" . join(key))
 
 # Apply vigener cipher to message using key
-def vigenere(message, key, encrypt=True):
+def vigenere(message: str, key: str, encrypt: bool = True) -> str:
     stripped_message = remove_spaces(message)
     gen_key = generate_key(stripped_message, key)
     encrypted_message = []
