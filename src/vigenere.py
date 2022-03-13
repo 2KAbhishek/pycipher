@@ -1,23 +1,22 @@
 # Program to encrypt and decrypt messages using a Caesar cipher
 def main():
     message = input("Enter the message: ")
-    stripped_message = "".join(message.split())
-
     key = input("Enter the key: ")
-    gen_key = generate_key(stripped_message, key)
 
     if input("Do you want to encrypt or decrypt the message? (E/D): ") == "D":
-        decrypted_message = decrypt(stripped_message, gen_key)
-        print("The decrypted message is:", add_spaces(message, decrypted_message))
+        print("The decrypted message is:", decrypt(message, key))
     else:
-        encrypted_message = encrypt(stripped_message, gen_key)
-        print("The encrypted message is:", add_spaces(message, encrypted_message))
+        print("The encrypted message is:", encrypt(message, key))
+
+# Remove spaces from the message
+def remove_spaces(message):
+    return("".join(message.split()))
 
 # Get back original message
-def add_spaces(message, processed):
+def add_spaces(processed, original):
     processed = list(processed)
-    for i in range(len(message)):
-        if message[i] == ' ':
+    for i in range(len(original)):
+        if original[i] == ' ':
             processed.insert(i, ' ')
     return ("" . join(processed))
 
@@ -33,15 +32,19 @@ def generate_key(message, key):
 
 # Encrypt the message using the key
 def encrypt(message, key):
+    stripped_message = remove_spaces(message)
+    gen_key = generate_key(stripped_message, key)
     encrypted_message = []
-    for i in range(len(message)):
-        x = (ord(message[i]) + ord(key[i])) % 26
-        x += ord('A')
-        encrypted_message.append(chr(x))
-    return("" . join(encrypted_message))
+    for i in range(len(stripped_message)):
+        code = (ord(stripped_message[i]) + ord(gen_key[i])) % 26
+        code += ord('A')
+        encrypted_message.append(chr(code))
+    return add_spaces("" . join(encrypted_message), message)
 
 # Decrypt the message using the key
 def decrypt(message, key):
+    message = remove_spaces(message)
+    key = generate_key(message, key)
     decypted_message = []
     for i in range(len(message)):
         x = (ord(message[i]) - ord(key[i]) + 26) % 26
