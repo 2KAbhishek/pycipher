@@ -1,6 +1,6 @@
 <div align = "center">
 
-<h1><a href="https://2kabhishek.github.io/pycipher">pycipher</a></h1>
+<h1><a href="https://2kabhishek.github.io/pycipher">PyCipher</a></h1>
 
 <a href="https://github.com/2KAbhishek/pycipher/blob/main/LICENSE">
 <img alt="License" src="https://img.shields.io/github/license/2kabhishek/pycipher?style=plastic&color=white&label=License"> </a>
@@ -23,82 +23,59 @@
 <a href="https://github.com/2KAbhishek?tab=followers">
 <img alt="Followers" src="https://img.shields.io/github/followers/2kabhishek?color=222&style=plastic&label=Followers"> </a>
 
-<h3>Short sweet headline with 🎇🎉</h3>
-
-<figure>
-  <img src= "images/screenshot.png" alt="pycipher Demo" style="width:100%">
-  <br/>
-  <figcaption>pycipher screenshot</figcaption>
-</figure>
+<h3>Cipher algorithms with Python 🐍🔏</h3>
 
 </div>
 
 ## What is this
 
-pycipher is a `<utility/tool/feature>` that allows `<insert_target_audience>` to do `<action/task_it_does>`.
+PyCipher is a collection of cipher algorithms written in `python`.
+
+Currently it includes the following ciphers and their tests:
+- Caesar
+- Vigenere
 
 ## Inspiration
 
-pycipher was inspired by `<reason/idea>`.
+Cryptography was always interesting to me, this is my hands-on with it.
 
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 
-- You have installed the latest version of `<coding_language/dependency/requirement_1>`
+- You have installed the latest version of `python`
+- For running the tests you need `unittest`
 
 ## Getting pycipher
 
-To install pycipher, follow these steps:
+To get pycipher, follow these steps:
 
 ```bash
 git clone https://github.com/2kabhishek/pycipher
 cd pycipher
-<install_command>
 ```
 
 ## Using pycipher
 
-```bash
-USAGE:
-    command [FLAGS] [OPTIONS]
-
-FLAGS:
-    -h, --help              Prints help information.
-
-OPTIONS:
-    -o, --option <value>    Option description.
-    Options are: a, b. [default: a]
-
-Example:
-
-
-```
+The source of the ciphers are kept under `src` you can import these into other modules for use.
+Unit tests are under the `test` directory.
 
 ## How it was built
 
-pycipher was built using `<tech/library>`
+pycipher was built using `VS Code`, `python` and `unittest`.
 
 ## Challenges faced
 
-While building pycipher the main challenges were `<issue/difficulty>`
+Getting VS Code to recognize the tests was tricky, had to add empty `__init__.py file.`
 
 ## What I learned
 
-While building pycipher I `<learned/accomplished>` about `<learning/accomplishment>`
+- Setting up `unittest` in VS Code.
+- Different cipher algorithms.
 
 ## What's next
 
-Planning to add `<feature/module>`.
-
-### To-Do
-
-- [x] Setup repo
-- [ ] Think real hard
-- [ ] Start typing
-- [ ] Change me
-- [ ] Update README
-- [ ] Finish it
+Add more ciphers.
 
 Hit the ⭐ button if you found this useful.
 
